@@ -16,15 +16,13 @@
         
         <div id="intro" style="display: none;">
             <h2>Experiment Anweisungen</h2>
-            <p>Du wirst verschiedene Wortlisten sehen. Nachdem die Liste verschwunden ist, gib bitte das Wort ein, das du dir am besten gemerkt hast.</p>
-            <label>Name: <input type="text" id="participantName"></label><br>
-            <label>Alter: <input type="number" id="participantAge"></label><br>
+            <p>Du wirst verschiedene Wörter sehen. Nachdem alle Wörter aus dem aktuellen Durchlauf angezeigt wurden, gib bitte das Wort ein, das du dir am besten gemerkt hast.</p>
+            <label>ID: <input type="text" id="participantID"></label><br>
             <button onclick="beginTrials()">Los geht's!</button>
         </div>
 
-        <div id="wordDisplay" style="display: none;">
-            <div id="timer">Verbleibende Zeit: 10s</div>
-            <ul id="wordList"></ul>
+        <div id="wordDisplay" style="display: block;">
+            <div id="wordList"></div>
         </div>        
 
         <div id="wordInput" style="display: none;">
@@ -41,3 +39,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+

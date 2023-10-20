@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wahrnehmungspsychologie Experiment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="welcomeMessage">
+            <h1>Willkommen zum Experiment</h1>
+            <p>Dies ist ein Uniprojekt. Bitte folge den Anweisungen auf dem Bildschirm. Der Ablauf wird im nächsten Schritt erklärt.</p>
+            <button onclick="startExperiment()">Start</button>
+        </div>
+        
+        <div id="intro" style="display: none;">
+            <h2>Experiment Anweisungen</h2>
+            <p>Du wirst verschiedene Wortlisten sehen. Nachdem die Liste verschwunden ist, gib bitte das Wort ein, das du dir am besten gemerkt hast.</p>
+            <label>Name: <input type="text" id="participantName"></label><br>
+            <label>Alter: <input type="number" id="participantAge"></label><br>
+            <button onclick="beginTrials()">Los geht's!</button>
+        </div>
+
+        <div id="wordDisplay" style="display: none;">
+            <div id="timer">Verbleibende Zeit: 10s</div>
+            <ul id="wordList"></ul>
+        </div>        
+
+        <div id="wordInput" style="display: none;">
+            <input type="text" id="wordResponse" placeholder="Dein Wort hier">
+            <button onclick="submitResponse()">Senden</button>
+        </div>
+        
+        <div id="endMessage" style="display: none;">
+            <h2>Danke für deine Teilnahme!</h2>
+            <p>Klicke unten, um deine Antworten herunterzuladen.</p>
+            <button onclick="downloadCSV()">Daten herunterladen</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
